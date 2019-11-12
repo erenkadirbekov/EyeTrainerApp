@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1044285867354",
+    "firebase_url": "https://eyetrainerapp.firebaseio.com",
+    "project_id": "eyetrainerapp",
+    "storage_bucket": "eyetrainerapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044285867354:android:083132bfedee794c80df63",
+        "android_client_info": {
+          "package_name": "com.example.eyetrainerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044285867354-11od1bl7ijorauurbhgorad9vvkc1okk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnIulEuLc4cOm50fxePtVGHR-HuzIU3PE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044285867354-11od1bl7ijorauurbhgorad9vvkc1okk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
