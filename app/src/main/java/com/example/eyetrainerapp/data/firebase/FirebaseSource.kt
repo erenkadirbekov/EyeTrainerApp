@@ -11,8 +11,10 @@ class FirebaseSource {
     fun login(email: String, password: String) = Completable.create { emitter ->
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
             if (!emitter.isDisposed) {
-                if (it.isSuccessful)
+                if (it.isSuccessful) {
                     emitter.onComplete()
+                    println("Complete")
+                }
                 else
                     emitter.onError(it.exception!!)
             }
