@@ -1,9 +1,11 @@
-package com.example.eyetrainerapp.ui.auth
+package com.example.eyetrainerapp.domain
 
 import android.content.Intent
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.eyetrainerapp.data.repositories.UserRepository
+import com.example.eyetrainerapp.ui.activities.auth.LoginActivity
+import com.example.eyetrainerapp.ui.activities.auth.SignUpActivity
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers

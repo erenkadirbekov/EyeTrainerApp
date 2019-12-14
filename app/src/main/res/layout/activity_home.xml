@@ -5,14 +5,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable name="viewmodel"
-            type="com.example.eyetrainerapp.ui.home.HomeViewModel"/>
+            type="com.example.eyetrainerapp.domain.HomeViewModel"/>
     </data>
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.home.HomeActivity">
+        tools:context=".ui.activities.home.HomeActivity">
+
+        <include
+            layout="@layout/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:text="@{viewmodel.user.email}"
@@ -31,6 +36,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-    </RelativeLayout>
-
+    </RelativeLayout>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/exercise_item"
+        />
 </layout>

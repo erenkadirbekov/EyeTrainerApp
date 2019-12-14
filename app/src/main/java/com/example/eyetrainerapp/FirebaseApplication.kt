@@ -3,8 +3,8 @@ package com.example.eyetrainerapp
 import android.app.Application
 import com.example.eyetrainerapp.data.firebase.FirebaseSource
 import com.example.eyetrainerapp.data.repositories.UserRepository
-import com.example.eyetrainerapp.ui.auth.AuthViewModelFactory
-import com.example.eyetrainerapp.ui.home.HomeViewModelFactory
+import com.example.eyetrainerapp.domain.AuthViewModelFactory
+import com.example.eyetrainerapp.domain.HomeViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule

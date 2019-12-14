@@ -2,8 +2,8 @@ package com.example.eyetrainerapp.utils
 
 import android.content.Context
 import android.content.Intent
-import com.example.eyetrainerapp.ui.auth.LoginActivity
-import com.example.eyetrainerapp.ui.home.HomeActivity
+import com.example.eyetrainerapp.ui.activities.auth.LoginActivity
+import com.example.eyetrainerapp.ui.activities.home.HomeActivity
 
 fun Context.startHomeActivity() =
     Intent(this, HomeActivity::class.java).also {

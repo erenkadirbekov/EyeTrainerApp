@@ -6,14 +6,14 @@
 
     <data>
         <variable name="viewmodel"
-            type="com.example.eyetrainerapp.ui.auth.AuthViewModel"/>
+            type="com.example.eyetrainerapp.domain.AuthViewModel"/>
     </data>
 
     <RelativeLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#008577"
         android:orientation="vertical"
-        tools:context=".ui.auth.SignupActivity"
+        tools:context=".ui.activities.auth.SignupActivity"
         android:scrollbarAlwaysDrawVerticalTrack="true">
 
         <RelativeLayout

@@ -1,4 +1,4 @@
-package com.example.eyetrainerapp.ui.home
+package com.example.eyetrainerapp.domain
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

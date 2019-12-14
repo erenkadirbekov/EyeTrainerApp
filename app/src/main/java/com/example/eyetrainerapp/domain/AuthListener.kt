@@ -1,4 +1,4 @@
-package com.example.eyetrainerapp.ui.auth
+package com.example.eyetrainerapp.domain
 
 interface AuthListener {
     fun onStarted()

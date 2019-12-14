@@ -13,7 +13,6 @@ class FirebaseSource {
             if (!emitter.isDisposed) {
                 if (it.isSuccessful) {
                     emitter.onComplete()
-                    println("Complete")
                 }
                 else
                     emitter.onError(it.exception!!)
