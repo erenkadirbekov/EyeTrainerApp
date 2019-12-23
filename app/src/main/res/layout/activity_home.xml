@@ -8,44 +8,29 @@
             type="com.example.eyetrainerapp.domain.HomeViewModel"/>
     </data>
 
-    <!--<RelativeLayout
-        android:id="@+id/drawer_layout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activities.home.HomeActivity">
+        tools:context="com.example.eyetrainerapp.ui.activities.home.HomeActivity">
 
-        <include
-            layout="@layout/toolbar_main"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
-        <TextView
-            android:text="@{viewmodel.user.email}"
-            tools:text="probelalkhan@gmail.com"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:layout_centerInParent="true"
-            android:id="@+id/textViewEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myRecycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
-        <Button
-            android:onClick="@{(v) -> viewmodel.logout(v)}"
-            android:text="Logout"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/textViewEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </RelativeLayout>-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/myRecycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/exercise_item"
-        />
+
 </layout>

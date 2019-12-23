@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" package="com.example.eyetrainerapp">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.eyetrainerapp">
 
     <application
         android:name=".FirebaseApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icons8_eye_96"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/icons8_eye_96"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name="com.example.eyetrainerapp.ui.activities.auth.SignUpActivity"></activity>
-        <activity android:name="com.example.eyetrainerapp.ui.activities.home.HomeActivity" />
-        <activity android:name="com.example.eyetrainerapp.ui.activities.auth.LoginActivity">
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="androidx"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".ui.activities.home.ExerciseActivity"></activity>
+        <activity android:name=".ui.activities.auth.SignUpActivity" />
+        <activity android:name=".ui.activities.home.HomeActivity" />
+        <activity android:name=".ui.activities.auth.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
