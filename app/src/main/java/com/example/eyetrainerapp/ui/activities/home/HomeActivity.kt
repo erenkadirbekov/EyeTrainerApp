@@ -18,8 +18,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        System.out.println("I'm here 4")
-
         dbHelper = DBOpenHelper(this)
 
 
@@ -28,12 +26,7 @@ class HomeActivity : AppCompatActivity() {
         val items: List<ExerciseEntity> = dbHelper.getAllExercises()
 
 
-        val adapter = MainAdapter(items, object: MainAdapter.Callback {
-            override fun onItemClicked(item: ExerciseEntity) {
-                print("Here " + item.id)
-                startExerciseActivity(item.id)
-            }
-        })
+        val adapter = MainAdapter(items, this)
 
         recyclerView.adapter = adapter
     }

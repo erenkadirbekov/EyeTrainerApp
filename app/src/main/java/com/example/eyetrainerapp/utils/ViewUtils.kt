@@ -19,9 +19,9 @@ fun Context.startLoginActivity() =
     }
 
 
-fun Context.startExerciseActivity(id: Int) =
-    Intent(this, ExerciseActivity::class.java).also {
+fun startExerciseActivity(id: Int, context: Context) =
+    Intent(context, ExerciseActivity::class.java).also {
         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         it.putExtra("exerciseId", id)
-        startActivity(it)
+        context.startActivity(it)
     }

@@ -1,5 +1,6 @@
 package com.example.eyetrainerapp.ui.activities.home
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,8 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eyetrainerapp.R
 import com.example.eyetrainerapp.data.entities.ExerciseEntity
+import com.example.eyetrainerapp.utils.startExerciseActivity
 
-class MainAdapter(var items: List<ExerciseEntity>, val callback: Callback) : RecyclerView.Adapter<MainAdapter.MainHolder>() {
+class MainAdapter(var items: List<ExerciseEntity>, val context : Context) : RecyclerView.Adapter<MainAdapter.MainHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
             = MainHolder(LayoutInflater.from(parent.context).inflate(R.layout.exercise_item, parent, false))
@@ -28,13 +30,10 @@ class MainAdapter(var items: List<ExerciseEntity>, val callback: Callback) : Rec
             exerciseName.text = item.name
             exerciseDescription.text = item.description
             itemView.setOnClickListener {
-                if (adapterPosition != RecyclerView.NO_POSITION) callback.onItemClicked(items[adapterPosition])
+                if (adapterPosition != RecyclerView.NO_POSITION) startExerciseActivity(item.id, context)
+
             }
         }
-    }
-
-    interface Callback {
-        fun onItemClicked(item: ExerciseEntity)
     }
 
 }
